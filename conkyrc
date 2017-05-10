@@ -1,0 +1,177 @@
+background yes
+update_interval 5
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+imlib_cache_size 100
+
+#######################################################
+# Compositing tips:
+# Conky will behave according to your window compositor
+# Please test different values to see the desired effect
+# on your system (comment/uncoment).
+#######################################################
+## no compositor
+#own_window_type override
+#own_window_argb_visual no
+
+## xcompmgr
+#own_window_type override
+#own_window_argb_visual yes
+
+## cairo-compmgr
+#own_window_type desktop
+own_window_argb_visual yes
+
+
+own_window yes
+own_window_transparent yes
+#own_window_type normal
+#own_window_class conky-semi
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 1366 768
+
+
+alignment top_left
+gap_x 0
+gap_y 0
+
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+use_xft yes
+xftfont pftempestafivecondensed:size=6
+xftalpha 0.2
+
+uppercase no
+
+default_color FFFFFF
+
+#lua_load  lua_widgets.lua
+#lua_draw_hook_pre start_widgets
+
+lua_load lua_widgets.lua
+lua_draw_hook_pre start_widgets
+
+
+xftfont Samanata:size=10
+own_window_argb_value 128
+own_window_colour 000000
+TEXT
+#${color EEE}${font DejaVu:size=10}
+#${voffset 360}${offset 1070}${top name 1}${alignr}CPU${top cpu 1}% | Mem${top mem 1}
+#${voffset 5}${offset 1070}${top name 2}${alignr}CPU${top cpu 2}% | Mem${top mem 2}
+#${voffset 5}${offset 1070}${top name 3}${alignr}CPU${top cpu 3}% | Mem${top mem 3}
+#${voffset 5}${offset 1070}${top name 4}${alignr}CPU${top cpu 4}% | Mem${top mem 4}
+#${voffset 5}${offset 1070}${top name 5}${alignr}CPU${top cpu 5}% | Mem${top mem 5}
+#${voffset 5}${offset 1070}${top name 6}${alignr}CPU${top cpu 6}% | Mem${top mem 6}
+#${voffset 5}${offset 1070}${top name 7}${alignr}CPU${top cpu 7}% | Mem${top mem 7}
+#${voffset 5}${offset 1070}${top name 8}${alignr}CPU${top cpu 8}% | Mem${top mem 8}
+#${voffset 5}${offset 1070}${top name 9}${alignr}CPU${top cpu 9}% | Mem${top mem 9}
+#${voffset 5}${offset 1070}${top name 10}${alignr}CPU${top cpu 10}% | Mem${top mem 10}
+
+# Possible variables to be used:
+#
+#      Variable         Arguments                  Description
+#  acpiacadapter                     ACPI ac adapter state.
+#  acpifan                           ACPI fan state
+#  acpitemp                          ACPI temperature.
+#  adt746xcpu                        CPU temperature from therm_adt746x
+#  adt746xfan                        Fan speed from therm_adt746x
+#  battery           (num)           Remaining capasity in ACPI or APM
+#                                    battery. ACPI battery number can be
+#                                    given as argument (default is BAT0).
+#  buffers                           Amount of memory buffered
+#  cached                            Amount of memory cached
+#  color             (color)         Change drawing color to color
+#  cpu                               CPU usage in percents
+#  cpubar            (height)        Bar that shows CPU usage, height is
+#                                    bar's height in pixels
+#  downspeed         net             Download speed in kilobytes
+#  downspeedf        net             Download speed in kilobytes with one
+#                                    decimal
+#  exec              shell command   Executes a shell command and displays
+#                                    the output in torsmo. warning: this
+#                                    takes a lot more resources than other
+#                                    variables. I'd recommend coding wanted
+#                                    behaviour in C and posting a patch :-).
+#  execi             interval, shell Same as exec but with specific interval.
+#                    command         Interval can't be less than
+#                                    update_interval in configuration.
+#  fs_bar            (height), (fs)  Bar that shows how much space is used on
+#                                    a file system. height is the height in
+#                                    pixels. fs is any file on that file
+#                                    system.
+#  fs_free           (fs)            Free space on a file system available
+#                                    for users.
+#  fs_free_perc      (fs)            Free percentage of space on a file
+#                                    system available for users.
+#  fs_size           (fs)            File system size
+#  fs_used           (fs)            File system used space
+#  hr                (height)        Horizontal line, height is the height in
+#                                    pixels
+#  i2c               (dev), type, n  I2C sensor from sysfs (Linux 2.6). dev
+#                                    may be omitted if you have only one I2C
+#                                    device. type is either in (or vol)
+#                                    meaning voltage, fan meaning fan or temp
+#                                    meaning temperature. n is number of the
+#                                    sensor. See /sys/bus/i2c/devices/ on
+#                                    your local computer.
+#  kernel                            Kernel version
+#  loadavg           (1), (2), (3)   System load average, 1 is for past 1
+#                                    minute, 2 for past 5 minutes and 3 for
+#                                    past 15 minutes.
+#  machine                           Machine, i686 for example
+#  mails                             Mail count in mail spool. You can use
+#                                    program like fetchmail to get mails from
+#                                    some server using your favourite
+#                                    protocol. See also new_mails.
+#  mem                               Amount of memory in use
+#  membar            (height)        Bar that shows amount of memory in use
+#  memmax                            Total amount of memory
+#  memperc                           Percentage of memory in use
+#  new_mails                         Unread mail count in mail spool.
+#  nodename                          Hostname
+#  outlinecolor      (color)         Change outline color
+#  pre_exec          shell command   Executes a shell command one time before
+#                                    torsmo displays anything and puts output
+#                                    as text.
+#  processes                         Total processes (sleeping and running)
+#  running_processes                 Running processes (not sleeping),
+#                                    requires Linux 2.6
+#  shadecolor        (color)         Change shading color
+#  stippled_hr       (space),        Stippled (dashed) horizontal line
+#                    (height)
+#  swapbar           (height)        Bar that shows amount of swap in use
+#  swap                              Amount of swap in use
+#  swapmax                           Total amount of swap
+#  swapperc                          Percentage of swap in use
+#  sysname                           System name, Linux for example
+#  time              (format)        Local time, see man strftime to get more
+#                                    information about format
+#  totaldown         net             Total download, overflows at 4 GB on
+#                                    Linux with 32-bit arch and there doesn't
+#                                    seem to be a way to know how many times
+#                                    it has already done that before torsmo
+#                                    has started.
+#  totalup           net             Total upload, this one too, may overflow
+#  updates                           Number of updates (for debugging)
+#  upspeed           net             Upload speed in kilobytes
+#  upspeedf          net             Upload speed in kilobytes with one
+#                                    decimal
+#  uptime                            Uptime
+#  uptime_short                      Uptime in a shorter format
+#
+#  seti_prog                         Seti@home current progress
+#  seti_progbar      (height)        Seti@home current progress bar
+#  seti_credit                       Seti@hoome total user credit
