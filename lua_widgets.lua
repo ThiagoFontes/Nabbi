@@ -2,7 +2,6 @@
 -- 2017 modified by Thiago Fontes
 
 require 'cairo'
-
 ------------------------- Configuration  ----------------------------------
 
 -- Widget type select from 1 or 2
@@ -466,9 +465,11 @@ cairo_move_to (cr, resolution_x - (x_start + 275), y_start + 450, 50);
 cairo_show_text(cr, program_info)
 
 -- Kernel version ----------------------------------------------------------------------------------------------------------
---kernel_v = conky_parse("Kernel ${kernel}")
---cairo_move_to (cr, resolution_x / 2 - 130, y_start, 60);
---cairo_show_text(cr, kernel_v)
+kernel_v = conky_parse("Kernel ${kernel}")
+cairo_move_to (cr, resolution_x / 2 - 120, y_start, 60);
+cairo_show_text(cr, kernel_v)
+
+
 end
 
 function conky_start_widgets()

@@ -63,22 +63,10 @@ default_color FFFFFF
 lua_load lua_widgets.lua
 lua_draw_hook_pre start_widgets
 
-
 xftfont Samanata:size=10
 own_window_argb_value 128
 own_window_colour 000000
 TEXT
-#${color EEE}${font DejaVu:size=10}
-#${voffset 360}${offset 1070}${top name 1}${alignr}CPU${top cpu 1}% | Mem${top mem 1}
-#${voffset 5}${offset 1070}${top name 2}${alignr}CPU${top cpu 2}% | Mem${top mem 2}
-#${voffset 5}${offset 1070}${top name 3}${alignr}CPU${top cpu 3}% | Mem${top mem 3}
-#${voffset 5}${offset 1070}${top name 4}${alignr}CPU${top cpu 4}% | Mem${top mem 4}
-#${voffset 5}${offset 1070}${top name 5}${alignr}CPU${top cpu 5}% | Mem${top mem 5}
-#${voffset 5}${offset 1070}${top name 6}${alignr}CPU${top cpu 6}% | Mem${top mem 6}
-#${voffset 5}${offset 1070}${top name 7}${alignr}CPU${top cpu 7}% | Mem${top mem 7}
-#${voffset 5}${offset 1070}${top name 8}${alignr}CPU${top cpu 8}% | Mem${top mem 8}
-#${voffset 5}${offset 1070}${top name 9}${alignr}CPU${top cpu 9}% | Mem${top mem 9}
-#${voffset 5}${offset 1070}${top name 10}${alignr}CPU${top cpu 10}% | Mem${top mem 10}
 
 # Possible variables to be used:
 #
