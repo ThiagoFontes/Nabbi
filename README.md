@@ -11,7 +11,7 @@ This was originally made by xeXpanderx http://xexpanderx.deviantart.com/
 
 # Instructions
 - Please install conky and lua on your system, also conky-manager is very helpfull for easy management of yor conky
-- Donwload the newest release and extract the files on ~/.conky/
+- Donwload the newest release (https://www.github.com/releases/latest) and extract the files on ~/.conky/
   - If the folder doesn't exist create
 - Now open conky-manager and this theme should be listed
 
