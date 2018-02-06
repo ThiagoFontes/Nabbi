@@ -17,4 +17,3 @@ This was originally made by xeXpanderx http://xexpanderx.deviantart.com/
 
   Clonning the repositorie may result on a broken/testing configuration please always go for the release page to download the most recent release.
 
-I plan on making a video tutorial latter this week, the link will be posted here
