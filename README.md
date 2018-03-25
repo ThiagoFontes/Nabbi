@@ -15,5 +15,5 @@ This was originally made by xeXpanderx http://xexpanderx.deviantart.com/
   - If the folder doesn't exist create
 - Now open conky-manager and this theme should be listed
 
-  Clonning the repositorie may result on a broken/testing configuration please always go for the release page to download the most recent release.
+  Clonning the repository may result on a broken/testing configuration please always go for the release page to download the most recent release.
 
